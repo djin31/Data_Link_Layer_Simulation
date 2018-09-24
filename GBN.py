@@ -1,5 +1,6 @@
 import time
-
+from threading import Lock, Thread
+lock = Lock()
 #this is set by data layer
 NETWORK_LAYER_ENABLED = False
 #this is set by network layer
@@ -34,6 +35,7 @@ class DataLinkLayer:
 		#timer times the last expected ack
 		self.timer = 0
 		self.TIME_FOR_ACK = TIME_FOR_ACK
+		self.frame_available = False
 
 	def enable_network_layer():
 		NETWORK_LAYER_ENABLED = True
@@ -52,8 +54,8 @@ class DataLinkLayer:
 
 	def to_physical_layer(frame):
 		pass
-
 	#returns false if frame has not arrived
+	#if frame has arrived, set frame_available to true
 	def from_physical_layer():
 		pass
 
@@ -75,7 +77,7 @@ class DataLinkLayer:
 			#set event here
 			if(NETWORK_LAYER_READY):
 				self.event = "network_layer_ready"
-			elif(self.from_physical_layer()):
+			elif(self.frame_available):
 				self.event = "frame_arrival"
 			elif(self.time_over()):
 				self.event = "timeout"
