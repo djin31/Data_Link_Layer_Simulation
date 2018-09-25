@@ -1,17 +1,39 @@
 import time
+from random import randint
 from threading import Lock, Thread
+
 lock = Lock()
 #this is set by data layer
 NETWORK_LAYER_ENABLED = False
 #this is set by network layer
 NETWORK_LAYER_READY = False
 
+PACKET_SEQUENCE = 0
+
+HOST_ID = 0
+
+TOTAL_HEADER_LENGTH = 32
 
 class Packet:
-	pass
+	def __init__(self):
+		global PACKET_SEQUENCE
+		self.seq = PACKET_SEQUENCE
+		self.host = HOST_ID
+		PACKET_SEQUENCE+=1
+		payload_string = "datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata"
+		payload_length = randint()%MAX_PACKET_LENGTH
+		self.info = payload_string[:payload_length]
 
 class NetworkLayer:
-	pass
+	def send_packet(self):
+		if (NETWORK_LAYER_ENABLED):
+			a = Packet()
+			return a
+
+	def receive_packet(self, packet):
+		f=open("packet_dump"+str(HOST_ID)+".txt","a+")
+		f.write("%f\t%d\n" %(str(time.time(),TOTAL_HEADER_LENGTH + len(packet.info))))
+		f.close()
 
 class Frame:
 	def __init__(self,frame_kind,seq_nr,ack_nr,info):
@@ -27,7 +49,7 @@ class DataLinkLayer:
 		self.ack_expected = 0
 		self.frame_expected = 0
 		#buffer contains packets, a maximum of MAX_SEQ
-		self.buffer = [Packet()]*(MAX_SEQ + 1)
+		self.buffer = [Packet()]*(MAX_SEQ + 1) # why packet here!
 		self.nbuffered = 0
 		self.event = None
 		self.network_layer_enabled = False
