@@ -131,7 +131,6 @@ class DataLinkLayer:
 		while(True):
 			try:
 				data = sock.recv(MAX_PACKET_LENGTH)
-				print data, "bdfbbbe"
 				self.frame_available = True
 				self.data_list.append(data)
 			except:
