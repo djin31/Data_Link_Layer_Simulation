@@ -57,6 +57,7 @@ class Frame:
 		self.ack = ack_nr
 		#info is of type Packet
 		self.info = info
+		self.checksum = ""
 
 class DataLinkLayer:
 	def __init__(self, MAX_SEQ, TIME_FOR_ACK):
