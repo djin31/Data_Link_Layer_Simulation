@@ -24,7 +24,7 @@ HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
-UDP_IP = "192.168.1.222"
+UDP_IP = "127.0.0.2"
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -41,6 +41,10 @@ class Packet:
 		self.info = payload_string[:payload_length]
 
 class NetworkLayer:
+	def __init__(self):
+		f = open("packet_dump"+str(HOST_ID)+".txt","w")
+		f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
+		f.close()
 	def send_packet(self):
 		global NETWORK_LAYER_ENABLED
 		if (NETWORK_LAYER_ENABLED):
@@ -48,7 +52,7 @@ class NetworkLayer:
 			return a
 
 	def receive_packet(self, packet):
-		print "hi here"
+		# print "hi here"
 		f = open("packet_dump"+str(HOST_ID)+".txt","a+")
 		f.write(str(time.time()) + " " + str(len(str(packet.seq))) + " " + str(len(str(packet.host))) + " " + str(len(packet.info)))
 		f.write("\n")
@@ -98,7 +102,7 @@ class DataLinkLayer:
 		self.timer = 0
 
 	def time_over(self):
-		print time.time() - self.timer, self.TIME_FOR_ACK
+		# print time.time() - self.timer, self.TIME_FOR_ACK
 		return (time.time() - self.timer) > self.TIME_FOR_ACK
 
 	def to_physical_layer(self,frame):
@@ -126,15 +130,15 @@ class DataLinkLayer:
 	#returns false if frame has not arrived
 	#if frame has arrived, set frame_available to true
 	def from_physical_layer(self):
-			data = self.data_list[0]
+			data = self.data_list[-1]
 			frame = self.convertStrToFrame(data)
 			return frame
 
 	def run_physical_layer(self):
 		while(True):
 			try:
-				data = sock.recv(MAX_PACKET_LENGTH)
-				print len(data), "ferer"
+				data = sock.recv(4096)
+				# print len(data), "ferer"
 				if(len(data) != 0):
 					self.frame_available = True
 					self.data_list.append(data)
@@ -157,7 +161,7 @@ class DataLinkLayer:
 		self.start_timer()
 
 	def to_network_layer(self,packet):
-		print "hi again"
+		# print "hi again"
 		network_layer.receive_packet(packet)
 
 	def from_network_layer(self):
@@ -170,7 +174,7 @@ class DataLinkLayer:
 	def run_network_layer(self):
 		while(True):
 			global NETWORK_LAYER_READY
-			if (int(time.time()*100)%2 == 1):
+			if (int(time.time()*1)%2 == 1):
 				NETWORK_LAYER_READY = True
 			else:
 				NETWORK_LAYER_READY = False
@@ -195,10 +199,10 @@ class DataLinkLayer:
 		thread.start_new_thread(self.run_physical_layer,())
 		while(True):
 			global NETWORK_LAYER_READY
-			print NETWORK_LAYER_READY, NETWORK_LAYER_ENABLED, self.frame_available, self.time_over()
-			print self.nbuffered, "rbrzbre"
+			# print NETWORK_LAYER_READY, NETWORK_LAYER_ENABLED, self.frame_available, self.time_over()
+			# print self.nbuffered, "rbrzbre"
 			#set event here
-			print self.event
+			# print self.event
 			if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
 				self.event = "network_layer_ready"
 			elif(self.frame_available):
@@ -223,6 +227,7 @@ class DataLinkLayer:
 			#handling frame arrival at physical layer
 			if(self.event == "frame_arrival"):
 				print "frame arrival"
+				self.frame_available=False
 				frame = self.from_physical_layer()
 				if(self.check_sum(frame) == False):
 					continue;
@@ -236,7 +241,7 @@ class DataLinkLayer:
 				print self.ack_expected, frame.ack + 1, "vdsrsf"
 				while(self.between(self.ack_expected,frame.ack,self.next_frame_to_send)):
 					self.nbuffered -= 1
-					if(i == self.ack_expected):
+					if(frame.ack == self.ack_expected):
 						self.stop_timer()
 					self.ack_expected = (self.ack_expected + 1)%(self.MAX_SEQ + 1)
 
