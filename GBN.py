@@ -23,11 +23,11 @@ HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
-UDP_IP = "127.0.0.1"
+UDP_IP = "192.168.1.222"
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('',5005))
+sock.bind(("127.0.0.1",5005))
 
 class Packet:
 	def __init__(self):
@@ -47,8 +47,10 @@ class NetworkLayer:
 			return a
 
 	def receive_packet(self, packet):
-		f=open("packet_dump"+str(HOST_ID)+".txt","a+")
+		print "hi here"
+		f = open("packet_dump"+str(HOST_ID)+".txt","a+")
 		f.write(str(time.time()) + " " + str(len(str(packet.seq))) + " " + str(len(str(packet.host))) + " " + str(len(packet.info)))
+		f.write("\n")
 		f.close()
 
 #global network layer
@@ -95,7 +97,7 @@ class DataLinkLayer:
 		self.timer = 0
 
 	def time_over(self):
-		#print time.time() - self.timer, self.TIME_FOR_ACK
+		print time.time() - self.timer, self.TIME_FOR_ACK
 		return (time.time() - self.timer) > self.TIME_FOR_ACK
 
 	def to_physical_layer(self,frame):
@@ -154,6 +156,7 @@ class DataLinkLayer:
 		self.start_timer()
 
 	def to_network_layer(self,packet):
+		print "hi again"
 		network_layer.receive_packet(packet)
 
 	def from_network_layer(self):
@@ -166,7 +169,7 @@ class DataLinkLayer:
 	def run_network_layer(self):
 		while(True):
 			global NETWORK_LAYER_READY
-			if (int(time.time()*1000)%2 == 1):
+			if (int(time.time()*100)%2 == 1):
 				NETWORK_LAYER_READY = True
 			else:
 				NETWORK_LAYER_READY = False
@@ -182,6 +185,9 @@ class DataLinkLayer:
 		else:
 			return False
 
+	def between(self,a,b,c):
+		return (a <= b and b < c) or (b <= c and c < a) or (c <= a and a < b)
+
 	def GBN_protocol(self):
 		self.enable_network_layer();
 		thread.start_new_thread(self.run_network_layer,())
@@ -189,6 +195,7 @@ class DataLinkLayer:
 		while(True):
 			global NETWORK_LAYER_READY
 			print NETWORK_LAYER_READY, NETWORK_LAYER_ENABLED, self.frame_available, self.time_over()
+			print self.nbuffered, "rbrzbre"
 			#set event here
 			print self.event
 			if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
@@ -197,7 +204,8 @@ class DataLinkLayer:
 				self.event = "frame_arrival"
 			elif(self.time_over()):
 				self.event = "timeout"
-
+			else:
+				self.event = "Nothing happening right now"
 			#handling packets from network layer
 			if(self.event == "network_layer_ready"):
 				packet = self.from_network_layer()
@@ -220,13 +228,14 @@ class DataLinkLayer:
 					packet = frame.info
 					#send packet to network layer
 					self.to_network_layer(packet)
-					self.frame_expected += 1
+					self.frame_expected = (self.frame_expected + 1)%(self.MAX_SEQ + 1)
 				#handle ack part
-				for i in range(self.ack_expected,frame.ack + 1):
+				print self.ack_expected, frame.ack + 1, "vdsrsf"
+				while(self.between(self.ack_expected,frame.ack,self.next_frame_to_send)):
 					self.nbuffered -= 1
 					if(i == self.ack_expected):
 						self.stop_timer()
-					self.ack_expected += 1
+					self.ack_expected = (self.ack_expected + 1)%(self.MAX_SEQ + 1)
 
 			#handling time_out
 			if(self.event == "timeout"):
@@ -234,7 +243,7 @@ class DataLinkLayer:
 				self.next_frame_to_send = self.ack_expected
 				for i in range(self.nbuffered):
 					self.send_data(self.next_frame_to_send,self.frame_expected)
-					self.next_frame_to_send += 1
+					self.next_frame_to_send = (self.next_frame_to_send + 1)%(self.MAX_SEQ + 1)
 
 			if(self.nbuffered < self.MAX_SEQ):
 				self.enable_network_layer()
@@ -242,7 +251,7 @@ class DataLinkLayer:
 				self.disable_network_layer()
 
 
-d = DataLinkLayer(20,10)
+d = DataLinkLayer(20,1)
 
 d.GBN_protocol()
 
