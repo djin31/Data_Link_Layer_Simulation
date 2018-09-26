@@ -1,4 +1,9 @@
+#The following things need to be multi-threaded
+# 2. from_physical_layer function of data layer
+# 3. from_network_layer function of data layer
+
 import time
+import socket
 from random import randint
 from threading import Lock, Thread
 
@@ -8,14 +13,19 @@ NETWORK_LAYER_ENABLED = False
 #this is set by network layer
 NETWORK_LAYER_READY = False
 
+MAX_PACKET_LENGTH = 4096
+
 PACKET_SEQUENCE = 0
 
 HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
-COMPLEMENT_HOST_IP = "127.0.0.1"
-PORT_NO = 7777
+UDP_IP = "127.0.0.1"
+UDP_PORT = 5005
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.bind(('',5005))
 
 class Packet:
 	def __init__(self):
@@ -31,13 +41,15 @@ class NetworkLayer:
 	def send_packet(self):
 		if (NETWORK_LAYER_ENABLED):
 			a = Packet()
-			s = str(a.seq) + "/" + str(a.host) + "/" + a.info
-			return s
+			return a
 
-	def receive_packet(self, string_packet):
+	def receive_packet(self, packet):
 		f=open("packet_dump"+str(HOST_ID)+".txt","a+")
-		f.write("%f\t%d\n" %(str(time.time(),len(string_packet))))
+		f.write("%f\t%d\n" %(str(time.time(),len(str(packet.seq)) + len(str(packet.host)) + len(packet.info))))
 		f.close()
+
+#global network layer
+network_layer = NetworkLayer()
 
 class Frame:
 	def __init__(self,frame_kind,seq_nr,ack_nr,info):
@@ -79,23 +91,69 @@ class DataLinkLayer:
 		return(time.time() - self.timer) > self.TIME_FOR_ACK
 
 	def to_physical_layer(frame):
-		pass
+		packet = frame.info
+		packet_str = str(packet.seq) + "_" + str(packet.host) + "_" + str(packet.info)
+		frame_str = str(frame.seq) + "_" +  str(frame.ack)
+		message = packet_str + frame_str 
+		check_sum_string = gen_check_sum(message)
+		message+="_"+check_sum_string
+		sock.sendto(message,(UDP_IP,UDP_PORT))
+	
+	def convertStrToFrame(string):
+		l = string.split("_")
+		p = Packet()
+		f = Frame()
+		p.seq = int(l[0])
+		p.host = int(l[1])
+		p.info = l[2]
+		f.seq = int(l[3])
+		f.ack = int(l[4])
+		f.checksum = l[5]
+		f.info = p
+		return f
+
 	#returns false if frame has not arrived
 	#if frame has arrived, set frame_available to true
 	def from_physical_layer():
-		pass
+		while(True):
+			try:
+				data = sock.recv(MAX_PACKET_LENGTH)
+			except:
+				continue
+			frame = self.convertStrToFrame(data)
+			self.frame_available = True
+			return frame
 
 	def send_data(frame_nr,frame_expected):
-		pass
+		s = Frame();
+		s.info = self.buffer[frame_nr]
+		s.seq = frame_nr
+		s.ack = (frame_expected + self.MAX_SEQ)%(self.MAX_SEQ + 1)
+		self.to_physical_layer(s)
+		start_timer()
 
 	def to_network_layer(packet):
-		pass
+		network_layer.receive_packet(packet)
 
 	def from_network_layer():
-		pass
+		while(True):
+			if (int(time.time()*1000)%2 == 1):
+				NETWORK_LAYER_READY = True
+			else:
+				NETWORK_LAYER_READY = False
+			if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
+				packet = network_layer.send_packet()
+				return packet
+
+	def gen_check_sum(frame_string):
+		return str(hash(frame_string)%1024)
 
 	def check_sum(frame):
-		pass
+		frame_string = str(frame.info.seq)+"_"+str(frame.info.host)+"_"+str(frame.info.info)+"_"+str(frame.seq) + "_" + str(frame.ack)
+		if (gen_check_sum(frame_string)==frame.check_sum):
+			return True
+		else:
+			return False
 
 	def GBN_protocol():
 		self.enable_network_layer();
@@ -130,7 +188,8 @@ class DataLinkLayer:
 				#handle ack part
 				for i in range(ack_expected,r.ack + 1):
 					self.nbuffered -= 1
-					stop_timer(i)
+					if(i == ack_expected):
+						stop_timer()
 					self.ack_expected += 1
 
 			#handling time_out
