@@ -203,11 +203,12 @@ class DataLinkLayer:
 				packet = self.from_network_layer()
 
 				#print self.next_frame_to_send, self.buffer
-				self.buffer[self.next_frame_to_send] = packet
-				self.nbuffered += 1
-				
-				self.send_data(self.next_frame_to_send,self.frame_expected)
-				self.next_frame_to_send  = (self.next_frame_to_send + 1)%(self.MAX_SEQ + 1)
+				if(packet != None):
+					self.buffer[self.next_frame_to_send] = packet
+					self.nbuffered += 1
+					
+					self.send_data(self.next_frame_to_send,self.frame_expected)
+					self.next_frame_to_send  = (self.next_frame_to_send + 1)%(self.MAX_SEQ + 1)
 
 			#handling frame arrival at physical layer
 			if(self.event == "frame_arrival"):
