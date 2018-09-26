@@ -14,6 +14,9 @@ HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
+COMPLEMENT_HOST_IP = "127.0.0.1"
+PORT_NO = 7777
+
 class Packet:
 	def __init__(self):
 		global PACKET_SEQUENCE
@@ -28,11 +31,12 @@ class NetworkLayer:
 	def send_packet(self):
 		if (NETWORK_LAYER_ENABLED):
 			a = Packet()
-			return a
+			s = str(a.seq) + "/" + str(a.host) + "/" + a.info
+			return s
 
-	def receive_packet(self, packet):
+	def receive_packet(self, string_packet):
 		f=open("packet_dump"+str(HOST_ID)+".txt","a+")
-		f.write("%f\t%d\n" %(str(time.time(),TOTAL_HEADER_LENGTH + len(packet.info))))
+		f.write("%f\t%d\n" %(str(time.time(),len(string_packet))))
 		f.close()
 
 class Frame:
