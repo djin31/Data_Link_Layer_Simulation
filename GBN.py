@@ -8,12 +8,13 @@ from random import randint
 from threading import Lock, Thread
 
 lock = Lock()
+
 #this is set by data layer
 NETWORK_LAYER_ENABLED = False
 #this is set by network layer
 NETWORK_LAYER_READY = False
 
-MAX_PACKET_LENGTH = 4096
+MAX_PACKET_LENGTH = 240
 
 PACKET_SEQUENCE = 0
 
@@ -33,7 +34,7 @@ class Packet:
 		self.seq = PACKET_SEQUENCE
 		self.host = HOST_ID
 		PACKET_SEQUENCE+=1
-		payload_string = "datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata"
+		payload_string = "datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata"
 		payload_length = randint()%MAX_PACKET_LENGTH
 		self.info = payload_string[:payload_length]
 
