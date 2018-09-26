@@ -24,11 +24,11 @@ HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
-UDP_IP = "127.0.0.2"
+UDP_IP = "127.0.0.1"
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('127.0.0.1',5005))
+sock.bind(('127.0.0.2',5005))
 
 class Packet:
 	def __init__(self):
@@ -144,7 +144,7 @@ class DataLinkLayer:
 		ack = (frame_expected + self.MAX_SEQ)%(self.MAX_SEQ + 1)
 		s = Frame(seq,ack,info)
 		packet = s.info
-		frame_str = str(packet.seq) + "_" + str(packet.host) + "_" + str(packet.info) + str(s.seq) + "_" +  str(s.ack)
+		frame_str = str(packet.seq) + "_" + str(packet.host) + "_" + str(packet.info) + str(packet.seq) + "_" +  str(packet.ack)
 		checksum = self.gen_check_sum(frame_str)
 		s.checksum = checksum
 		self.to_physical_layer(s)
