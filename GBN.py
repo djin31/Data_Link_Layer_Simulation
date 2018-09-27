@@ -12,6 +12,8 @@ from threading import Lock, Thread
 
 lock = Lock()
 
+BIG_NUMBER = 1000000000000
+
 #this is set by data layer
 NETWORK_LAYER_ENABLED = False
 #this is set by network layer
@@ -87,6 +89,9 @@ class DataLinkLayer:
 		self.TIME_FOR_ACK = TIME_FOR_ACK
 		self.frame_available = False
 		self.data_list = []
+		self.timers = {}
+		for i in range(MAX_SEQ + 1):
+			self.timers[i] = BIG_NUMBER
 
 	def enable_network_layer(self):
 		global NETWORK_LAYER_ENABLED
@@ -96,15 +101,14 @@ class DataLinkLayer:
 		global NETWORK_LAYER_ENABLED
 		NETWORK_LAYER_ENABLED = False
 
-	def start_timer(self):
-		self.timer = time.time()
+	def start_timer(self, frame_nr):
+		self.timers[frame_nr] = time.time()
 
-	def stop_timer(self):
-		self.timer = 0
+	def stop_timer(self,ack_expected):
+		self.timers[ack_expected] = BIG_NUMBER
 
 	def time_over(self):
-		print time.time() - self.timer, self.TIME_FOR_ACK
-		return (time.time() - self.timer) > self.TIME_FOR_ACK
+		return (time.time() - self.timers[self.ack_expected]) > self.TIME_FOR_ACK
 
 	def to_physical_layer(self,frame):
 		packet = frame.info
@@ -113,6 +117,7 @@ class DataLinkLayer:
 		message = packet_str + "_" + frame_str 
 		check_sum_string = self.gen_check_sum(message)
 		message += "_" + check_sum_string
+		print "Sent frame " + frame_str
 		sock.sendto(message,(UDP_IP,UDP_PORT))
 	
 	def convertStrToFrame(self,string):
@@ -159,7 +164,7 @@ class DataLinkLayer:
 		checksum = self.gen_check_sum(frame_str)
 		s.checksum = checksum
 		self.to_physical_layer(s)
-		self.start_timer()
+		self.start_timer(frame_nr)
 
 	def to_network_layer(self,packet):
 		# print "hi again"
@@ -173,7 +178,7 @@ class DataLinkLayer:
 	def run_network_layer(self):
 		while(True):
 			global NETWORK_LAYER_READY
-			if (int(time.time()*1)%2 == 1):
+			if (int(time.time()*1000)%2 == 1):
 				NETWORK_LAYER_READY = True
 			else:
 				NETWORK_LAYER_READY = False
@@ -228,6 +233,7 @@ class DataLinkLayer:
 				self.frame_available=False
 				frame = self.from_physical_layer()
 				if(self.check_sum(frame) == False):
+					print "checksum"
 					continue;
 				#handle data part
 				if(frame.seq == self.frame_expected):
@@ -238,12 +244,11 @@ class DataLinkLayer:
 					self.to_network_layer(packet)
 					self.frame_expected = (self.frame_expected + 1)%(self.MAX_SEQ + 1)
 				#handle ack part
-				print self.ack_expected, frame.ack + 1, "vdsrsf"
-				while(self.between(self.ack_expected,frame.ack,self.next_frame_to_send)):
-					self.nbuffered -= 1
-					if(frame.ack == self.ack_expected):
-						self.stop_timer()
-					self.ack_expected = (self.ack_expected + 1)%(self.MAX_SEQ + 1)
+					print self.ack_expected, frame.ack + 1, "vdsrsf"
+					while(self.between(self.ack_expected,frame.ack,self.next_frame_to_send)):
+						self.nbuffered -= 1
+						self.stop_timer(self.ack_expected)
+						self.ack_expected = (self.ack_expected + 1)%(self.MAX_SEQ + 1)
 
 			#handling time_out
 			if(self.event == "timeout"):
