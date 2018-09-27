@@ -6,6 +6,7 @@ import time
 import socket
 import random
 import thread
+import sys
 from random import randint
 from threading import Lock, Thread
 
@@ -24,11 +25,11 @@ HOST_ID = 0
 
 TOTAL_HEADER_LENGTH = 32
 
-UDP_IP = "127.0.0.2"
+UDP_IP = sys.argv[1]
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(("127.0.0.1",5005))
+sock.bind((sys.argv[2],5005))
 
 class Packet:
 	def __init__(self):
@@ -174,7 +175,7 @@ class DataLinkLayer:
 	def run_network_layer(self):
 		while(True):
 			global NETWORK_LAYER_READY
-			if (int(time.time()*1)%2 == 1):
+			if (int(time.time()*1000)%2 == 1):
 				NETWORK_LAYER_READY = True
 			else:
 				NETWORK_LAYER_READY = False
