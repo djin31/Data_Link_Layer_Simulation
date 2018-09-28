@@ -136,7 +136,8 @@ class DataLinkLayer:
 	#returns false if frame has not arrived
 	#if frame has arrived, set frame_available to true
 	def from_physical_layer(self):
-			data = self.data_list[-1]
+			data = self.data_list[0]
+			self.data_list.remove(self.data_list[0])
 			frame = self.convertStrToFrame(data)
 			return frame
 
@@ -206,10 +207,10 @@ class DataLinkLayer:
 			# print NETWORK_LAYER_READY, NETWORK_LAYER_ENABLED, self.frame_available, self.time_over()
 			# print self.nbuffered, "rbrzbre"
 			#set event here
-			# print self.event
+			#print self.event
 			if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
 				self.event = "network_layer_ready"
-			elif(self.frame_available):
+			elif(len(self.data_list) > 0):
 				self.event = "frame_arrival"
 			elif(self.time_over()):
 				self.event = "timeout"
@@ -236,10 +237,9 @@ class DataLinkLayer:
 					print "checksum"
 					continue;
 				#handle data part
-				"Expected and got ", self.frame_expected, frame.seq
+				"Expected and got ", self.frame_expected, frame.seq, "vghvjyvyjvgy"
 				if(frame.seq == self.frame_expected):
 					print "frame arrival"
-
 					packet = frame.info
 					#send packet to network layer
 					self.to_network_layer(packet)
@@ -266,7 +266,7 @@ class DataLinkLayer:
 				self.disable_network_layer()
 
 
-d = DataLinkLayer(20,1)
+d = DataLinkLayer(20,10)
 
 d.GBN_protocol()
 
