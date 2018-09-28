@@ -236,6 +236,7 @@ class DataLinkLayer:
 					print "checksum"
 					continue;
 				#handle data part
+				"Expected and got ", self.frame_expected, frame.seq
 				if(frame.seq == self.frame_expected):
 					print "frame arrival"
 
