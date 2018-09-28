@@ -32,6 +32,8 @@ UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((sys.argv[3],5005))
+# sleep to allow sockets to set up
+time.sleep(2)
 
 class Packet:
 	def __init__(self):
@@ -45,19 +47,23 @@ class Packet:
 
 class NetworkLayer:
 	def __init__(self):
-		f = open("packet_dump"+str(HOST_ID)+".txt","w")
+		f = open("received_packets"+str(HOST_ID)+".txt","w")
+		f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
+		f.close()
+		f = open("sent_packets"+str(HOST_ID)+".txt","w")
 		f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
 		f.close()
 
 	def send_packet(self):
 		a = Packet()
-		print "sent packet " + str(a.seq) + " of size " + str(len(a.info))
+		f = open("sent_packets"+str(HOST_ID)+".txt","a+")
+		f.write("{:12.2f}".format(time.time()) +": Sent packet " + str(a.seq) + " of size " + str(len(a.info)) + "\n")
+		f.close()
 		return a
 
 	def receive_packet(self, packet):
-		# print "hi here"
-		f = open("packet_dump"+str(HOST_ID)+".txt","a+")
-		f.write(str(time.time()) + " " + str(packet.seq) + " " + str(packet.host) + " " + str(len(packet.info)) + " " + packet.info)
+		f = open("received_packets"+str(HOST_ID)+".txt","a+")
+		f.write("{:12.2f}".format(time.time()) + ": Received " + str(packet.seq) + " from " + str(packet.host) + " of length " + str(len(packet.info)) )
 		f.write("\n")
 		f.close()
 
@@ -117,7 +123,7 @@ class DataLinkLayer:
 		message = packet_str + "_" + frame_str 
 		check_sum_string = self.gen_check_sum(message)
 		message += "_" + check_sum_string
-		print "Sent frame " + frame_str
+		print str(time.time()),": Sent frame", str(frame.seq), "with Ack", str(frame.ack)
 		sock.sendto(message,(UDP_IP,UDP_PORT))
 	
 	def convertStrToFrame(self,string):
@@ -145,7 +151,6 @@ class DataLinkLayer:
 		while(True):
 			try:
 				data = sock.recv(4096)
-				# print len(data), "ferer"
 				if(len(data) != 0):
 					self.frame_available = True
 					self.data_list.append(data)
@@ -156,7 +161,6 @@ class DataLinkLayer:
 
 	def send_data(self,frame_nr,frame_expected):
 		info = self.buffer[frame_nr]
-		#print frame_nr,info
 		seq = frame_nr
 		ack = (frame_expected + self.MAX_SEQ)%(self.MAX_SEQ + 1)
 		s = Frame(seq,ack,info)
@@ -168,7 +172,6 @@ class DataLinkLayer:
 		self.start_timer(frame_nr)
 
 	def to_network_layer(self,packet):
-		# print "hi again"
 		network_layer.receive_packet(packet)
 
 	def from_network_layer(self):
@@ -179,7 +182,7 @@ class DataLinkLayer:
 	def run_network_layer(self):
 		while(True):
 			global NETWORK_LAYER_READY
-			if (int(time.time()*1000)%2 == 1):
+			if (int(time.time()*1)%2 == 1):
 				NETWORK_LAYER_READY = True
 			else:
 				NETWORK_LAYER_READY = False
@@ -204,10 +207,9 @@ class DataLinkLayer:
 		thread.start_new_thread(self.run_physical_layer,())
 		while(True):
 			global NETWORK_LAYER_READY
-			# print NETWORK_LAYER_READY, NETWORK_LAYER_ENABLED, self.frame_available, self.time_over()
-			# print self.nbuffered, "rbrzbre"
+			
 			#set event here
-			#print self.event
+			
 			if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
 				self.event = "network_layer_ready"
 			elif(len(self.data_list) > 0):
@@ -216,16 +218,17 @@ class DataLinkLayer:
 				self.event = "timeout"
 			else:
 				self.event = "Nothing happening right now"
+
+			if (self.event!="Nothing happening right now"):
+				print "Event: " + self.event
+
 			#handling packets from network layer
 			if(self.event == "network_layer_ready"):
-				print "network_layer_ready"
 				packet = self.from_network_layer()
 
-				#print self.next_frame_to_send, self.buffer
 				if(packet != None):
 					self.buffer[self.next_frame_to_send] = packet
-					self.nbuffered += 1
-					
+					self.nbuffered += 1					
 					self.send_data(self.next_frame_to_send,self.frame_expected)
 					self.next_frame_to_send  = (self.next_frame_to_send + 1)%(self.MAX_SEQ + 1)
 
@@ -234,18 +237,17 @@ class DataLinkLayer:
 				self.frame_available=False
 				frame = self.from_physical_layer()
 				if(self.check_sum(frame) == False):
-					print "checksum"
+					print "Checksum Error"
 					continue;
 				#handle data part
-				"Expected and got ", self.frame_expected, frame.seq, "vghvjyvyjvgy"
-				if(frame.seq == self.frame_expected):
-					print "frame arrival"
+				print "Frame Expected:", self.frame_expected, "Frame received:",frame.seq
+				if(frame.seq == self.frame_expected):					
 					packet = frame.info
 					#send packet to network layer
 					self.to_network_layer(packet)
 					self.frame_expected = (self.frame_expected + 1)%(self.MAX_SEQ + 1)
 				#handle ack part
-					print self.ack_expected, frame.ack + 1, "vdsrsf"
+					print "Ack expected:",self.ack_expected,"Ack received:", frame.ack
 					while(self.between(self.ack_expected,frame.ack,self.next_frame_to_send)):
 						self.nbuffered -= 1
 						self.stop_timer(self.ack_expected)
@@ -254,7 +256,7 @@ class DataLinkLayer:
 			#handling time_out
 			if(self.event == "timeout"):
 				#start repeating from the frame whose ack was not received
-				print "timeout"
+				print "Timeout"
 				self.next_frame_to_send = self.ack_expected
 				for i in range(self.nbuffered):
 					self.send_data(self.next_frame_to_send,self.frame_expected)
