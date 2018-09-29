@@ -33,6 +33,8 @@ time.sleep(2)
 
 PAYLOAD_BYTES_SENT=0
 PAYLOAD_BYTES_RECEIVED=0
+PACKETS_RECEIVED=0
+
 class Packet:
     def __init__(self):
         self.seq = PACKET_SEQUENCE
@@ -65,6 +67,8 @@ class NetworkLayer:
 
     def receive_packet(self, packet):
     	global PAYLOAD_BYTES_RECEIVED
+    	global PACKETS_RECEIVED
+    	PACKETS_RECEIVED+=1
     	PAYLOAD_BYTES_RECEIVED+=len(packet.info)
         f = open("received_packets"+str(HOST_ID)+".txt", "a+")
         f.write("{:12.2f}".format(time.time()) + ": Received " + str(packet.seq) +
@@ -193,7 +197,7 @@ class DataLinkLayer:
     def run_network_layer(self):
         while(True):
             global NETWORK_LAYER_READY
-            if (int(time.time()*1000000) % 2 == 1):
+            if (int(time.time()*1000) % 2 == 1):
                 NETWORK_LAYER_READY = True
             else:
                 NETWORK_LAYER_READY = False
@@ -220,9 +224,8 @@ class DataLinkLayer:
         frames_resent = 0
         frames_arrived_correct = 0
         frames_arrived_csum = 0
-        count = 0
-        while(count < 10000000):
-            count += 1
+        time_begin = time.time()
+        while(time.time()-time_begin < 20):
             global NETWORK_LAYER_READY
 
             # set event here
@@ -294,10 +297,18 @@ class DataLinkLayer:
                 self.enable_network_layer()
             else:
                 self.disable_network_layer()
-        print "Frames transmitted: ",frames_sent
+
+        print "\n Host",str(HOST_ID),"TRANSMISSION SUMMARY"
+        print "Total Frames transmitted: ",frames_sent + frames_resent
         print "Frames retransmitted: ",frames_resent
-        print "Frames arrived with checksum error: ",frames_arrived_csum 
-        print "Frames arrived with no error: ",frames_arrived_correct
+        print "Packets sent: ",PACKET_SEQUENCE
+        print "Payload bytes sent: ", PAYLOAD_BYTES_SENT
+        print "\n Host",str(HOST_ID),"RECEPTION SUMMARY"
+        print "Frames received with checksum error: ",frames_arrived_csum 
+        print "Frames received with no error: ", frames_arrived_correct
+        print "Packets received: ",PACKETS_RECEIVED
+        print "Payload bytes received: ", PAYLOAD_BYTES_RECEIVED
+
 
 
 d = DataLinkLayer(7, 1)
