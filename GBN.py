@@ -216,7 +216,13 @@ class DataLinkLayer:
         self.enable_network_layer()
         thread.start_new_thread(self.run_network_layer, ())
         thread.start_new_thread(self.run_physical_layer, ())
-        while(True):
+        frames_sent = 0
+        frames_resent = 0
+        frames_arrived_correct = 0
+        frames_arrived_csum = 0
+        count = 0
+        while(count < 10000000):
+            count += 1
             global NETWORK_LAYER_READY
 
             # set event here
@@ -241,6 +247,7 @@ class DataLinkLayer:
                 if(packet != None):
                     self.buffer[self.next_frame_to_send] = packet
                     self.nbuffered += 1
+                    frames_sent += 1
                     self.send_data(self.next_frame_to_send,
                                    self.frame_expected)
                     self.next_frame_to_send = (
@@ -252,10 +259,12 @@ class DataLinkLayer:
                 frame = self.from_physical_layer()
                 if(self.check_sum(frame) == False):
                     print "Checksum Error"
+                    frames_arrived_csum += 1
                     continue
                 # handle data part
                 print "Frame Expected:", self.frame_expected, "Frame received:", frame.seq
                 if(frame.seq == self.frame_expected):
+                    frames_arrived_correct += 1
                     packet = frame.info
                     # send packet to network layer
                     self.to_network_layer(packet)
@@ -275,6 +284,7 @@ class DataLinkLayer:
                 print "Timeout"
                 self.next_frame_to_send = self.ack_expected
                 for i in range(self.nbuffered):
+                    frames_resent += 1
                     self.send_data(self.next_frame_to_send,
                                    self.frame_expected)
                     self.next_frame_to_send = (
@@ -284,6 +294,10 @@ class DataLinkLayer:
                 self.enable_network_layer()
             else:
                 self.disable_network_layer()
+        print "Frames transmitted: ",frames_sent
+        print "Frames retransmitted: ",frames_resent
+        print "Frames arrived with checksum error: ",frames_arrived_csum 
+        print "Frames arrived with no error: ",frames_arrived_correct
 
 
 d = DataLinkLayer(7, 1)
