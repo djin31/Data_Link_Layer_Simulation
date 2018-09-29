@@ -31,7 +31,8 @@ sock.bind((sys.argv[2], UDP_PORT))
 # sleep to allow sockets to set up
 time.sleep(2)
 
-
+PAYLOAD_BYTES_SENT=0
+PAYLOAD_BYTES_RECEIVED=0
 class Packet:
     def __init__(self):
         self.seq = PACKET_SEQUENCE
@@ -43,7 +44,6 @@ class Packet:
 
 class NetworkLayer:
     def __init__(self):
-
         f = open("received_packets"+str(HOST_ID)+".txt", "w")
         f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
         f.close()
@@ -54,8 +54,9 @@ class NetworkLayer:
     def send_packet(self):
         a = Packet()
         global PACKET_SEQUENCE
+        global PAYLOAD_BYTES_SENT
         PACKET_SEQUENCE += 1
-
+        PAYLOAD_BYTES_SENT += len(a.info)
         f = open("sent_packets"+str(HOST_ID)+".txt", "a+")
         f.write("{:12.2f}".format(time.time()) + ": Sent packet " +
                 str(a.seq) + " of size " + str(len(a.info)) + "\n")
@@ -63,6 +64,8 @@ class NetworkLayer:
         return a
 
     def receive_packet(self, packet):
+    	global PAYLOAD_BYTES_RECEIVED
+    	PAYLOAD_BYTES_RECEIVED+=len(packet.info)
         f = open("received_packets"+str(HOST_ID)+".txt", "a+")
         f.write("{:12.2f}".format(time.time()) + ": Received " + str(packet.seq) +
                 " from " + str(packet.host) + " of length " + str(len(packet.info)))
