@@ -1,10 +1,10 @@
 #!/usr/bin/python
 import thread,time,socket
-UDP_IP = "127.0.0.1"
+UDP_IP = "10.0.0.1"
 UDP_PORT = 5005
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(('127.0.0.2',5005))
+sock.bind(('',5005))
 time.sleep(1)
 # sock.connect((UDP_IP,UDP_PORT))
 def send_packet():

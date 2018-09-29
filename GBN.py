@@ -23,11 +23,11 @@ HOST_ID = sys.argv[1]
 
 TOTAL_HEADER_LENGTH = 32
 
-UDP_IP = sys.argv[2]
-UDP_PORT = 5005
+UDP_IP = sys.argv[3]
+UDP_PORT = 7777
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind((sys.argv[3], 5005))
+sock.bind((sys.argv[2], UDP_PORT))
 # sleep to allow sockets to set up
 time.sleep(2)
 
