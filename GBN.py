@@ -31,6 +31,10 @@ sock.bind((sys.argv[2], UDP_PORT))
 # sleep to allow sockets to set up
 time.sleep(2)
 
+VERBOSE_MODE=False
+if (len(sys.argv)>4):
+    VERBOSE_MODE=True
+
 PAYLOAD_BYTES_SENT=0
 PAYLOAD_BYTES_RECEIVED=0
 PACKETS_RECEIVED=0
@@ -46,12 +50,13 @@ class Packet:
 
 class NetworkLayer:
     def __init__(self):
-        f = open("received_packets"+str(HOST_ID)+".txt", "w")
-        f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
-        f.close()
-        f = open("sent_packets"+str(HOST_ID)+".txt", "w")
-        f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
-        f.close()
+        if VERBOSE_MODE:
+            f = open("received_packets"+str(HOST_ID)+".txt", "w")
+            f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
+            f.close()
+            f = open("sent_packets"+str(HOST_ID)+".txt", "w")
+            f.write("Network layer on host "+str(HOST_ID)+" initialised\n")
+            f.close()
 
     def send_packet(self):
         a = Packet()
@@ -59,22 +64,24 @@ class NetworkLayer:
         global PAYLOAD_BYTES_SENT
         PACKET_SEQUENCE += 1
         PAYLOAD_BYTES_SENT += len(a.info)
-        f = open("sent_packets"+str(HOST_ID)+".txt", "a+")
-        f.write("{:12.2f}".format(time.time()) + ": Sent packet " +
-                str(a.seq) + " of size " + str(len(a.info)) + "\n")
-        f.close()
+        if VERBOSE_MODE:
+            f = open("sent_packets"+str(HOST_ID)+".txt", "a+")
+            f.write("{:12.2f}".format(time.time()) + ": Sent packet " +
+                    str(a.seq) + " of size " + str(len(a.info)) + "\n")
+            f.close()
         return a
 
     def receive_packet(self, packet):
-    	global PAYLOAD_BYTES_RECEIVED
-    	global PACKETS_RECEIVED
-    	PACKETS_RECEIVED+=1
-    	PAYLOAD_BYTES_RECEIVED+=len(packet.info)
-        f = open("received_packets"+str(HOST_ID)+".txt", "a+")
-        f.write("{:12.2f}".format(time.time()) + ": Received " + str(packet.seq) +
-                " from " + str(packet.host) + " of length " + str(len(packet.info)))
-        f.write("\n")
-        f.close()
+        global PAYLOAD_BYTES_RECEIVED
+        global PACKETS_RECEIVED
+        PACKETS_RECEIVED+=1
+        PAYLOAD_BYTES_RECEIVED+=len(packet.info)
+        if VERBOSE_MODE:
+            f = open("received_packets"+str(HOST_ID)+".txt", "a+")
+            f.write("{:12.2f}".format(time.time()) + ": Received " + str(packet.seq) +
+                    " from " + str(packet.host) + " of length " + str(len(packet.info)))
+            f.write("\n")
+            f.close()
 
 
 # global network layer
@@ -225,7 +232,7 @@ class DataLinkLayer:
         frames_arrived_correct = 0
         frames_arrived_csum = 0
         time_begin = time.time()
-        while(time.time()-time_begin < 20):
+        while(time.time()-time_begin < 30):
             global NETWORK_LAYER_READY
 
             # set event here

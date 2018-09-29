@@ -1,0 +1,2390 @@
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215836.95 : Sent frame 0 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215837.16 : Sent frame 1 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215837.36 : Sent frame 2 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215837.46 : Sent frame 3 with Ack 5
+
+Event: network_layer_ready
+1538215837.55 : Sent frame 4 with Ack 5
+
+Event: network_layer_ready
+1538215837.56 : Sent frame 5 with Ack 5
+
+Event: network_layer_ready
+1538215837.56 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215837.56 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215837.58 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215837.72 : Sent frame 1 with Ack 6
+
+Event: network_layer_ready
+1538215837.75 : Sent frame 2 with Ack 6
+
+Event: network_layer_ready
+1538215837.79 : Sent frame 3 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 0
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 1
+
+Event: network_layer_ready
+1538215838.01 : Sent frame 4 with Ack 6
+
+Event: network_layer_ready
+1538215838.05 : Sent frame 5 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 2
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 3
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 4
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 5
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215838.12 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215838.29 : Sent frame 7 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215838.54 : Sent frame 0 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 0 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 6
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 7
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 0
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 1
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 2
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 0 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 0 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 0 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 0 Ack received: 7
+
+Event: network_layer_ready
+1538215838.65 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215838.68 : Sent frame 2 with Ack 7
+
+Event: network_layer_ready
+1538215838.75 : Sent frame 3 with Ack 7
+
+Event: network_layer_ready
+1538215838.78 : Sent frame 4 with Ack 7
+
+Event: network_layer_ready
+1538215838.78 : Sent frame 5 with Ack 7
+
+Event: network_layer_ready
+1538215838.78 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215839.0 : Sent frame 7 with Ack 1
+
+Event: network_layer_ready
+1538215839.02 : Sent frame 0 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 3 Ack received: 3
+
+Event: network_layer_ready
+1538215839.47 : Sent frame 1 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 4
+
+Event: network_layer_ready
+1538215839.56 : Sent frame 2 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 4 Ack received: 7
+
+Event: network_layer_ready
+1538215839.64 : Sent frame 3 with Ack 6
+
+Event: network_layer_ready
+1538215839.82 : Sent frame 4 with Ack 6
+
+Event: network_layer_ready
+1538215839.87 : Sent frame 5 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215840.01 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215840.16 : Sent frame 7 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 2
+
+Event: network_layer_ready
+1538215840.43 : Sent frame 0 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 3
+
+Event: network_layer_ready
+1538215840.72 : Sent frame 1 with Ack 4
+
+Event: timeout
+Timeout
+1538215840.76 : Sent frame 3 with Ack 4
+1538215840.79 : Sent frame 4 with Ack 4
+1538215840.8 : Sent frame 5 with Ack 4
+1538215840.81 : Sent frame 6 with Ack 4
+1538215840.81 : Sent frame 7 with Ack 4
+1538215840.83 : Sent frame 0 with Ack 4
+1538215840.92 : Sent frame 1 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 0
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215841.16 : Sent frame 2 with Ack 6
+
+Event: network_layer_ready
+1538215841.23 : Sent frame 3 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 1 Ack received: 0
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215841.23 : Sent frame 4 with Ack 0
+
+Event: network_layer_ready
+1538215841.23 : Sent frame 5 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215841.24 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215841.24 : Sent frame 7 with Ack 2
+
+Event: network_layer_ready
+1538215841.24 : Sent frame 0 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 4
+
+Event: network_layer_ready
+1538215841.86 : Sent frame 1 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 4 Ack received: 4
+
+Event: network_layer_ready
+1538215841.99 : Sent frame 2 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 5
+
+Event: network_layer_ready
+1538215842.1 : Sent frame 3 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215842.32 : Sent frame 4 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 7
+
+Event: timeout
+Timeout
+1538215842.49 : Sent frame 7 with Ack 2
+1538215842.57 : Sent frame 0 with Ack 2
+1538215842.64 : Sent frame 1 with Ack 2
+1538215842.74 : Sent frame 2 with Ack 2
+1538215842.77 : Sent frame 3 with Ack 2
+1538215842.85 : Sent frame 4 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 1
+
+Event: network_layer_ready
+1538215842.98 : Sent frame 5 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215843.26 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 0 with Ack 5
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 1 with Ack 5
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 2 with Ack 5
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 3 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 4 with Ack 6
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 5 with Ack 6
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 6 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 7 with Ack 7
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 0 with Ack 7
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 2 with Ack 7
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 3 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 4 with Ack 0
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 5 with Ack 0
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 6 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 7 with Ack 1
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 0 with Ack 1
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 1 with Ack 1
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 2 with Ack 1
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 3 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 4 with Ack 2
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 5 with Ack 2
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 6 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 7 with Ack 3
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 1 with Ack 3
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 5 with Ack 4
+
+Event: network_layer_ready
+1538215843.33 : Sent frame 6 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215843.43 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215843.53 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 5 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 5 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 5 Ack received: 0
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 1 Ack received: 1
+
+Event: network_layer_ready
+1538215843.78 : Sent frame 1 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 1 Ack received: 1
+
+Event: network_layer_ready
+1538215844.01 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215844.15 : Sent frame 3 with Ack 3
+
+Event: network_layer_ready
+1538215844.18 : Sent frame 4 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 0
+
+Event: network_layer_ready
+1538215844.37 : Sent frame 5 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 0
+
+Event: network_layer_ready
+1538215844.63 : Sent frame 6 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 5 Ack received: 5
+
+Event: network_layer_ready
+1538215844.98 : Sent frame 7 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215845.23 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215845.23 : Sent frame 1 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 1
+
+Event: network_layer_ready
+1538215845.24 : Sent frame 2 with Ack 4
+
+Event: network_layer_ready
+1538215845.32 : Sent frame 3 with Ack 4
+
+Event: network_layer_ready
+1538215845.35 : Sent frame 4 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 4
+
+Event: network_layer_ready
+1538215845.67 : Sent frame 5 with Ack 5
+
+Event: network_layer_ready
+1538215845.69 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215845.8 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215845.8 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 5
+
+Event: network_layer_ready
+1538215845.8 : Sent frame 1 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 5 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215845.8 : Sent frame 2 with Ack 0
+
+Event: network_layer_ready
+1538215845.8 : Sent frame 3 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215845.89 : Sent frame 4 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 6 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 2
+
+Event: network_layer_ready
+1538215846.05 : Sent frame 5 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215846.16 : Sent frame 6 with Ack 0
+
+Event: network_layer_ready
+1538215846.16 : Sent frame 7 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 3 Ack received: 4
+
+Event: network_layer_ready
+1538215846.17 : Sent frame 0 with Ack 1
+
+Event: network_layer_ready
+1538215846.26 : Sent frame 1 with Ack 1
+
+Event: network_layer_ready
+1538215846.39 : Sent frame 2 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 4 Ack received: 5
+
+Event: network_layer_ready
+1538215846.47 : Sent frame 3 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 3
+
+Event: network_layer_ready
+1538215846.58 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215846.58 : Sent frame 5 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215846.59 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215846.59 : Sent frame 7 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 4 Ack received: 4
+
+Event: network_layer_ready
+1538215846.65 : Sent frame 0 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 4 Ack received: 4
+
+Event: network_layer_ready
+1538215847.08 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215847.15 : Sent frame 2 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 4 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 6 Ack received: 2
+
+Event: network_layer_ready
+1538215847.6 : Sent frame 3 with Ack 4
+
+Event: network_layer_ready
+1538215847.65 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215847.69 : Sent frame 5 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215847.73 : Sent frame 6 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215847.99 : Sent frame 7 with Ack 7
+
+Event: network_layer_ready
+1538215848.1 : Sent frame 0 with Ack 7
+
+Event: network_layer_ready
+1538215848.17 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215848.21 : Sent frame 2 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 5
+
+Event: network_layer_ready
+1538215848.32 : Sent frame 3 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 5 Ack received: 1
+
+Event: network_layer_ready
+1538215848.52 : Sent frame 4 with Ack 2
+
+Event: network_layer_ready
+1538215848.62 : Sent frame 5 with Ack 2
+
+Event: network_layer_ready
+1538215848.76 : Sent frame 6 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 3 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 3 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215848.84 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215848.91 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 3 Ack received: 3
+
+Event: network_layer_ready
+1538215849.37 : Sent frame 1 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 3 Ack received: 5
+
+Event: network_layer_ready
+1538215849.61 : Sent frame 2 with Ack 7
+
+Event: network_layer_ready
+1538215849.72 : Sent frame 3 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 5 Ack received: 3
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 4 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 5 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 7 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 0 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 1 with Ack 2
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 2 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215849.82 : Sent frame 3 with Ack 3
+
+Event: network_layer_ready
+1538215849.88 : Sent frame 4 with Ack 3
+
+Event: network_layer_ready
+1538215849.95 : Sent frame 5 with Ack 3
+
+Event: network_layer_ready
+1538215850.04 : Sent frame 6 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 0 Ack received: 3
+
+Event: network_layer_ready
+1538215850.23 : Sent frame 7 with Ack 4
+
+Event: network_layer_ready
+1538215850.39 : Sent frame 0 with Ack 4
+
+Event: network_layer_ready
+1538215850.48 : Sent frame 1 with Ack 4
+
+Event: network_layer_ready
+1538215850.57 : Sent frame 2 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 4 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 0 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 0 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215850.63 : Sent frame 3 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215850.75 : Sent frame 4 with Ack 1
+
+Event: network_layer_ready
+1538215850.91 : Sent frame 5 with Ack 1
+
+Event: network_layer_ready
+1538215850.98 : Sent frame 6 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215851.26 : Sent frame 7 with Ack 3
+
+Event: network_layer_ready
+1538215851.31 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215851.33 : Sent frame 1 with Ack 3
+
+Event: network_layer_ready
+1538215851.38 : Sent frame 2 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215851.58 : Sent frame 3 with Ack 6
+
+Event: network_layer_ready
+1538215851.63 : Sent frame 4 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 1 Ack received: 3
+
+Event: network_layer_ready
+1538215851.73 : Sent frame 5 with Ack 7
+
+Event: network_layer_ready
+1538215851.77 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215851.92 : Sent frame 7 with Ack 0
+
+Event: network_layer_ready
+1538215851.95 : Sent frame 0 with Ack 0
+
+Event: network_layer_ready
+1538215851.99 : Sent frame 1 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 4 Ack received: 3
+
+Event: network_layer_ready
+1538215852.08 : Sent frame 2 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 4 Ack received: 7
+
+Event: network_layer_ready
+1538215852.17 : Sent frame 3 with Ack 3
+
+Event: network_layer_ready
+1538215852.27 : Sent frame 4 with Ack 3
+
+Event: network_layer_ready
+1538215852.27 : Sent frame 5 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 1
+
+Event: network_layer_ready
+1538215852.4 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215852.43 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215852.49 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215852.59 : Sent frame 1 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215852.7 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215852.76 : Sent frame 3 with Ack 3
+
+Event: network_layer_ready
+1538215852.83 : Sent frame 4 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 7
+
+Event: network_layer_ready
+1538215852.83 : Sent frame 5 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 7 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 2 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215852.87 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215852.91 : Sent frame 7 with Ack 2
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 0 with Ack 2
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 1 with Ack 2
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 2 with Ack 2
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 3 with Ack 2
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 4 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 6 Ack received: 1
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 5 with Ack 4
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 6 with Ack 4
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 7 with Ack 4
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 0 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 1 with Ack 5
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 2 with Ack 5
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 3 with Ack 5
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 4 with Ack 5
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 5 with Ack 5
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 6 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 0 Ack received: 1
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 7 with Ack 6
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 0 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 2 with Ack 7
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 3 with Ack 7
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 4 with Ack 7
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 5 with Ack 7
+
+Event: network_layer_ready
+1538215852.96 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215853.11 : Sent frame 7 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215853.27 : Sent frame 0 with Ack 1
+
+Event: network_layer_ready
+1538215853.37 : Sent frame 1 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 3 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215853.8 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215853.85 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 6 Ack received: 6
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 4 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 6 Ack received: 7
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 5 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 6 with Ack 7
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 7 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 0 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 1 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 2 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 3 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 4 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 5 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 6 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 0 Ack received: 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 7 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 1 Ack received: 2
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 0 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 3
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 1 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 6
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 2 with Ack 5
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 3 with Ack 5
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 4 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 6 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 5 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 6 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 7 with Ack 0
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 0 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 1 with Ack 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 2 with Ack 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 3 with Ack 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 4 with Ack 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 5 with Ack 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 6 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 7 with Ack 2
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 0 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 5
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 1 with Ack 3
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 7
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 5 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 1
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 6 with Ack 5
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215853.95 : Sent frame 0 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 4
+
+Event: network_layer_ready
+1538215854.47 : Sent frame 1 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 4
+
+Event: network_layer_ready
+1538215854.6 : Sent frame 2 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 4 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 4 Ack received: 2
+
+Event: network_layer_ready
+1538215855.48 : Sent frame 3 with Ack 4
+
+Event: network_layer_ready
+1538215855.58 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215855.64 : Sent frame 5 with Ack 4
+
+Event: network_layer_ready
+1538215855.75 : Sent frame 6 with Ack 4
+
+Event: network_layer_ready
+1538215855.77 : Sent frame 7 with Ack 4
+
+Event: network_layer_ready
+1538215855.91 : Sent frame 0 with Ack 4
+
+Event: network_layer_ready
+1538215856.07 : Sent frame 1 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215856.28 : Sent frame 2 with Ack 5
+
+Event: network_layer_ready
+1538215856.29 : Sent frame 3 with Ack 5
+
+Event: network_layer_ready
+1538215856.32 : Sent frame 4 with Ack 5
+
+Event: network_layer_ready
+1538215856.35 : Sent frame 5 with Ack 5
+
+Event: network_layer_ready
+1538215856.44 : Sent frame 6 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215856.67 : Sent frame 7 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215857.06 : Sent frame 0 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215857.23 : Sent frame 1 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 3 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215857.3 : Sent frame 2 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215857.57 : Sent frame 3 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 4 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 5 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 6 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 7 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 1 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 3 Ack received: 2
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 2 with Ack 4
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 3 with Ack 4
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 5 with Ack 4
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 6 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 7 with Ack 5
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 0 with Ack 5
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 1 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 3 Ack received: 7
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 2 with Ack 0
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 3 with Ack 0
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 4 with Ack 0
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 5 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215857.67 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215857.68 : Sent frame 7 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 1 Ack received: 3
+
+Event: network_layer_ready
+1538215857.77 : Sent frame 0 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 3 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 7 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 0 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 0 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 2
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 3
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 4
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 5
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 6
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 0 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 7
+
+Event: network_layer_ready
+1538215857.79 : Sent frame 1 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 0 Ack received: 0
+
+Event: network_layer_ready
+1538215857.86 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215857.89 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215857.98 : Sent frame 4 with Ack 4
+
+Event: network_layer_ready
+1538215858.01 : Sent frame 5 with Ack 4
+
+Event: network_layer_ready
+1538215858.05 : Sent frame 6 with Ack 4
+
+Event: network_layer_ready
+1538215858.1 : Sent frame 7 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 1 Ack received: 5
+
+Event: network_layer_ready
+1538215858.48 : Sent frame 0 with Ack 2
+
+Event: network_layer_ready
+1538215858.63 : Sent frame 1 with Ack 2
+
+Event: network_layer_ready
+1538215858.71 : Sent frame 2 with Ack 2
+
+Event: network_layer_ready
+1538215858.8 : Sent frame 3 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 0
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215858.98 : Sent frame 4 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215859.04 : Sent frame 5 with Ack 5
+
+Event: network_layer_ready
+1538215859.05 : Sent frame 6 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215859.05 : Sent frame 7 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 1 Ack received: 3
+
+Event: network_layer_ready
+1538215859.3 : Sent frame 0 with Ack 0
+
+Event: network_layer_ready
+1538215859.39 : Sent frame 1 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 3 Ack received: 3
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 3 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 5
+
+Event: network_layer_ready
+1538215859.67 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215859.72 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 0
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 1 Ack received: 0
+
+Event: network_layer_ready
+1538215859.84 : Sent frame 4 with Ack 5
+
+Event: network_layer_ready
+1538215859.84 : Sent frame 5 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 1 Ack received: 1
+
+Event: network_layer_ready
+1538215859.84 : Sent frame 6 with Ack 6
+
+Event: network_layer_ready
+1538215859.94 : Sent frame 7 with Ack 6
+
+Event: network_layer_ready
+1538215859.96 : Sent frame 0 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215859.98 : Sent frame 1 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 0 Ack received: 2
+
+Event: network_layer_ready
+1538215860.17 : Sent frame 2 with Ack 1
+
+Event: network_layer_ready
+1538215860.19 : Sent frame 3 with Ack 1
+
+Event: network_layer_ready
+1538215860.24 : Sent frame 4 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 0 Ack received: 4
+
+Event: network_layer_ready
+1538215860.38 : Sent frame 5 with Ack 2
+
+Event: network_layer_ready
+1538215860.38 : Sent frame 6 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 4
+
+Event: network_layer_ready
+1538215860.49 : Sent frame 7 with Ack 3
+
+Event: network_layer_ready
+1538215860.52 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215860.58 : Sent frame 1 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215860.76 : Sent frame 2 with Ack 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 6 Ack received: 5
+
+Event: network_layer_ready
+1538215861.01 : Sent frame 3 with Ack 5
+
+Event: network_layer_ready
+1538215861.02 : Sent frame 4 with Ack 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 6 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 0 Ack received: 5
+
+Event: network_layer_ready
+1538215861.42 : Sent frame 5 with Ack 7
+
+Event: network_layer_ready
+1538215861.5 : Sent frame 6 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 0 Ack received: 6
+
+Event: network_layer_ready
+1538215861.66 : Sent frame 7 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 7 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 7 Ack received: 2
+
+Event: network_layer_ready
+1538215861.79 : Sent frame 0 with Ack 2
+
+Event: network_layer_ready
+1538215861.8 : Sent frame 1 with Ack 2
+
+Event: network_layer_ready
+1538215861.91 : Sent frame 2 with Ack 2
+
+Event: network_layer_ready
+1538215861.99 : Sent frame 3 with Ack 2
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 4 with Ack 2
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 5 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 7 Ack received: 4
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 6 with Ack 3
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 7 with Ack 3
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 1 with Ack 3
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 2 with Ack 3
+
+Event: network_layer_ready
+1538215862.04 : Sent frame 3 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 5
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 6
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 7
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 0
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 1
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 2
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 7
+
+Event: network_layer_ready
+1538215862.2 : Sent frame 4 with Ack 6
+
+Event: network_layer_ready
+1538215862.22 : Sent frame 5 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215862.33 : Sent frame 6 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 6
+
+Event: network_layer_ready
+1538215862.46 : Sent frame 7 with Ack 1
+
+Event: network_layer_ready
+1538215862.5 : Sent frame 0 with Ack 1
+
+Event: network_layer_ready
+1538215862.59 : Sent frame 1 with Ack 1
+
+Event: network_layer_ready
+1538215862.61 : Sent frame 2 with Ack 1
+
+Event: network_layer_ready
+1538215862.68 : Sent frame 3 with Ack 1
+
+Event: network_layer_ready
+1538215862.69 : Sent frame 4 with Ack 1
+
+Event: network_layer_ready
+1538215862.69 : Sent frame 5 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 7 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 5 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 5 Ack received: 6
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215862.9 : Sent frame 6 with Ack 6
+
+Event: network_layer_ready
+1538215863.0 : Sent frame 7 with Ack 6
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215863.1 : Sent frame 0 with Ack 7
+
+Event: network_layer_ready
+1538215863.1 : Sent frame 1 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 6 Ack received: 7
+
+Event: network_layer_ready
+1538215863.12 : Sent frame 2 with Ack 0
+
+Event: network_layer_ready
+1538215863.19 : Sent frame 3 with Ack 0
+
+Event: network_layer_ready
+1538215863.25 : Sent frame 4 with Ack 0
+
+Event: network_layer_ready
+1538215863.32 : Sent frame 5 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 7 Ack received: 7
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 7 Ack received: 0
+
+Event: network_layer_ready
+1538215863.64 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215863.8 : Sent frame 7 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 1 Ack received: 5
+
+Event: network_layer_ready
+1538215864.08 : Sent frame 0 with Ack 3
+
+Event: network_layer_ready
+1538215864.1 : Sent frame 1 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 5 Ack received: 5
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 5 Ack received: 5
+
+Event: network_layer_ready
+1538215864.45 : Sent frame 2 with Ack 7
+
+Event: network_layer_ready
+1538215864.56 : Sent frame 3 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 5 Ack received: 6
+
+Event: network_layer_ready
+1538215864.57 : Sent frame 4 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 6 Ack received: 0
+
+Event: network_layer_ready
+1538215864.58 : Sent frame 5 with Ack 1
+
+Event: network_layer_ready
+1538215864.58 : Sent frame 6 with Ack 1
+
+Event: network_layer_ready
+1538215864.58 : Sent frame 7 with Ack 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 3
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 4
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 5
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 6
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 7
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 0
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 1 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 2
+
+Event: network_layer_ready
+1538215864.68 : Sent frame 0 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 5 Frame received: 5
+Ack expected: 2 Ack received: 2
+
+Event: frame_arrival
+Frame Expected: 6 Frame received: 6
+Ack expected: 2 Ack received: 4
+
+Event: frame_arrival
+Frame Expected: 7 Frame received: 7
+Ack expected: 4 Ack received: 4
+
+Event: network_layer_ready
+1538215864.99 : Sent frame 1 with Ack 7
+
+Event: network_layer_ready
+1538215865.09 : Sent frame 2 with Ack 7
+
+Event: frame_arrival
+Frame Expected: 0 Frame received: 0
+Ack expected: 4 Ack received: 0
+
+Event: network_layer_ready
+1538215865.21 : Sent frame 3 with Ack 0
+
+Event: frame_arrival
+Frame Expected: 1 Frame received: 1
+Ack expected: 1 Ack received: 1
+
+Event: frame_arrival
+Frame Expected: 2 Frame received: 2
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215865.35 : Sent frame 4 with Ack 2
+
+Event: network_layer_ready
+1538215865.53 : Sent frame 5 with Ack 2
+
+Event: network_layer_ready
+1538215865.58 : Sent frame 6 with Ack 2
+
+Event: network_layer_ready
+1538215865.62 : Sent frame 7 with Ack 2
+
+Event: frame_arrival
+Frame Expected: 3 Frame received: 3
+Ack expected: 2 Ack received: 1
+
+Event: network_layer_ready
+1538215865.74 : Sent frame 0 with Ack 3
+
+Event: frame_arrival
+Frame Expected: 4 Frame received: 4
+Ack expected: 2 Ack received: 2
+
+Event: timeout
+Timeout
+1538215866.13 : Sent frame 2 with Ack 4
+1538215866.14 : Sent frame 3 with Ack 4
+1538215866.22 : Sent frame 4 with Ack 4
+1538215866.24 : Sent frame 5 with Ack 4
+1538215866.27 : Sent frame 6 with Ack 4
+1538215866.28 : Sent frame 7 with Ack 4
+1538215866.31 : Sent frame 0 with Ack 4
+
+ Host 2 TRANSMISSION SUMMARY
+Total Frames transmitted:  389
+Frames retransmitted:  20
+Packets sent:  369
+Payload bytes sent:  43659
+
+ Host 2 RECEPTION SUMMARY
+Frames received with checksum error:  0
+Frames received with no error:  285
+Packets received:  285
+Payload bytes received:  34693
