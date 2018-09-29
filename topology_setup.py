@@ -15,7 +15,8 @@ class testTopo(Topo):
         s0 = self.addSwitch('s0')
 
         # adding links
-        self.addLink(h1,s0,bw=1, delay='5ms',loss=, max_queue_size=50)
-        self.addLink(h2,s0,bw=1, delay='5ms',loss=10, max_queue_size=50)
+        self.addLink(h1, s0, bw=1, delay='5ms', loss=, max_queue_size=50)
+        self.addLink(h2, s0, bw=1, delay='5ms', loss=10, max_queue_size=50)
 
-topos = { 'mytopo': ( lambda: testTopo() ) } 
+
+topos = {'mytopo': (lambda: testTopo())}
