@@ -137,14 +137,20 @@ class DataLinkLayer:
 
     def to_physical_layer(self, frame):
         packet = frame.info
+
+        #stringifying packet
         packet_str = str(packet.seq) + "_" + \
             str(packet.host) + "_" + str(packet.info)
+
+        #stringifying frame
         frame_str = str(frame.seq) + "_" + str(frame.ack)
         message = packet_str + "_" + frame_str
         check_sum_string = self.gen_check_sum(message)
         message += "_" + check_sum_string
         print str(time.time()), ": Sent frame", str(
             frame.seq), "with Ack", str(frame.ack)
+
+        #sending via socket
         sock.sendto(message, (UDP_IP, UDP_PORT))
 
     def convertStrToFrame(self, string):
@@ -227,16 +233,17 @@ class DataLinkLayer:
         self.enable_network_layer()
         thread.start_new_thread(self.run_network_layer, ())
         thread.start_new_thread(self.run_physical_layer, ())
+
         frames_sent = 0
         frames_resent = 0
         frames_arrived_correct = 0
         frames_arrived_csum = 0
         time_begin = time.time()
+        
         while(time.time()-time_begin < 30):
             global NETWORK_LAYER_READY
 
             # set event here
-
             if(NETWORK_LAYER_READY and NETWORK_LAYER_ENABLED):
                 self.event = "network_layer_ready"
             elif(len(self.data_list) > 0):
