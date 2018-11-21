@@ -1,5 +1,5 @@
-# Networks_A2
-Data Link and Network Layer simulation for COL334 Assignment 2
+# Data_Link_Layer_Simulation
+Go-Back-N Data Link simulation for COL334 Assignment 2
 
 # Running the code
 ```
